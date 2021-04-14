@@ -41,4 +41,4 @@ class Hippopotamus {
     }
 
 }
-module.export = Hippopotamus;
+module.exports = Hippopotamus;
