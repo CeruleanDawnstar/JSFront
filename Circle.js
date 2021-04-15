@@ -4,7 +4,7 @@ class Circle {
         this.radius = radius;
     }
     area() {
-        return Math.round(Math.PI * 2 * this.radius);
+        console.log(Math.round(Math.PI * 2 * this.radius));
     }
 
     containsPoint(p) {
@@ -13,9 +13,9 @@ class Circle {
         const length = Math.sqrt((difX * difX) + (difY * difY));
 
         if (length >= 0 && length <= this.radius) {
-            return true;
+            console.log('Le point est dans le cercle.');
         } else {
-            return false;
+            console.log("Le point n'est pas dans ce cercle");
         }
     }
 }
