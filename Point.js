@@ -8,20 +8,20 @@ class Point {
         return this.x;
     }
 
-    setX() {
-        this.x = x;
+    setX(value) {
+        this.x = value;
     }
 
     getY() {
         return this.y;
     }
 
-    setY() {
-        this.y = y;
+    setY(value) {
+        this.y = value;
     }
 
     toString() {
-        console.log(`Les coordonnées du point en X est ${this.x} et en Y est ${this.y}`);
+        console.log(`Les coordonnées du point en X est ${this.getX()} et en Y est ${this.getY()}`);
     }
 }
 module.exports = Point;
