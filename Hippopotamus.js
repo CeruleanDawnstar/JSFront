@@ -6,18 +6,21 @@ class Hippopotamus {
     }
     
 
-    swim() {
+    swim() { // fonction nager, enlève 300g
         this.weight = this.weight - 300;
     }
 
-    eat() {
+    eat() { // fonction manger, gagne 1000g / 1kg
         this.weight = this.weight + 1000;
     }
 
-    fight(Hippopotamus) {
-        // if (this.tusksSize < Hippopotamus.tusksSize) {
-        //     console.log("");
-        // }
+    fight(hippopotamus) {
+        if(this.tusksSize > hippopotamus.tusksSize) {
+            console.log(`${this.name} remporte le fight`);
+        }
+        else {
+            console.log(`${hippopotamus.name} remporte le fight`);
+        }
     }
 
     toString() {
@@ -25,18 +28,15 @@ class Hippopotamus {
     }
 
     cycleDeVie() {
-        for(i=0; i < 21; i++) {
-            for(j=0; j < 15; j++) {
+        for(let jour = 0 ; jour < 21 ; jour++) { // nb de jours dans 3 semaines
+            for(let heures = 0 ; heures < 15 ; heures++) { // nb d'heures actifs
                 this.eat();
                 this.eat();
                 this.swim();
                 this.swim();
                 this.swim();
-                console.log("C'est la " + j + "e heure.")
             }
-            console.log("Jour " + i)
-            console.log(`L'hippo ${this.name} pèse actuellement ${this.weight} grammes.`)
-            console.log('');
+            this.toString();
         }
     }
 
