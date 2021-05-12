@@ -1,3 +1,4 @@
+// désolé je n'ai pas su remplacer le script
 if (localStorage.getItem("token") !== null) {
     var postDiv = document.getElementById('posts');
 
